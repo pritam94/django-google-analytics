@@ -18,7 +18,8 @@ def google_analytics(context, tracking_code=None, debug=False):
     # attempt get the request from the context
     request = context.get('request', None)
     if request is None:
-        raise RuntimeError("Request context required")
+        return
+#         raise RuntimeError("Request context required")
     # intialise the parameters collection
     params = {}
     # collect the campaign tracking parameters from the request
